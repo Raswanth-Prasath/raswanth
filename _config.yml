@@ -1,9 +1,9 @@
 source: .
 destination: ./_site
 includes: ./_includes
-baseurl: null
-relative_url: "https://raswanthprasath.com"
-url: "https://raswanthprasath.com"
+baseurl: ""
+url: "https://raswanth-prasath.github.io"
+relative_url: "https://raswanth-prasath.github.io"
 permalink: /:year/:month/:day/:title
 title: "Raswanth Prasath"
 description: "Your description here"
