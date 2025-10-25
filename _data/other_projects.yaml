@@ -1,0 +1,7 @@
+other_projects:
+  - title: "Pyodi: Python Object Detection Insights"
+    description: 
+      "A simple tool for explore your object detection dataset. The goal of this library is to provide simple and intuitive visualizations
+       from your dataset and automatically find the best parameters for generating a specific grid of anchors that can fit you data characteristics"
+    code: "https://github.com/Gradiant/pyodi"
+    tags: "#deep-learning #computer-vision #object-detection #pytorch"

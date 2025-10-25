@@ -1,0 +1,74 @@
+experiences:
+  - company: "Hudl"
+    url: "https://www.hudl.com/"
+    location: "Vigo, ESP (Remote)"
+    time: "Aug'24 - now"
+    title: "Senior Machine Learning Engineer"
+    image: "/assets/images/fullsize/vitae/hudl.webp"
+    description: ""
+
+  - company: "Statsbomb"
+    url: "https://statsbomb.com/"
+    location: "Vigo, ESP (Remote)"
+    time: "Feb'22 - Jul'24"
+    title: "Machine Learning Engineer"
+    image: "/assets/images/fullsize/vitae/statsbomb.webp"
+    description: "Architecting and deploying advanced computer vision systems for automated sports analytics, processing thousands of matches across 90+ leagues. 
+    Building custom deep learning models (PyTorch) for real-time player tracking, ball detection, and camera calibration. 
+    Established an end-to-end MLOps pipeline for model training, deployment, and monitoring at scale, while leading AI infrastructure modernization and technical initiatives in sports data collection."
+
+  - company: "Gradiant"
+    url: "https://www.gradiant.org/"
+    location: "Vigo, ESP"
+    time: "Apr'19 - Jan'22"
+    title: "Machine Learning Research Engineer"
+    image: "/assets/images/fullsize/vitae/gradiant.webp"
+    description: "Led development of computer vision solutions for real-time object detection and semantic segmentation with deep learning frameworks (PyTorch/TensorFlow). 
+    Optimized models for deployment on edge (Nvidia Jetson) and cloud platforms (AWS/Azure). Directed AI best practices, MLOps pipelines, and infrastructure modernization."
+
+  - company: "Desigual, InnoIT"
+    url: "https://www.inno-it.es/"
+    location: "Barcelona, ESP"
+    time: "Feb'18 - Apr'19"
+    title: "Data Scientist, Consultant"
+    image: "/assets/images/fullsize/vitae/desigual.webp"
+    description: "Designed end-to-end machine learning solutions for retail optimization, including demand forecasting and intelligent inventory management across a global store network. 
+    Developed a CNN-based visual search system for product recommendations and style matching. Implemented predictive analytics to enhance stock distribution and improve supply chain efficiency."
+
+  - company: "Purdue University"
+    url: "https://www.purdue.edu/"
+    location: "Indiana, USA"
+    time: "Aug'16 - Jun'17"
+    title: "Master in Artificial Intelligence (Study Abroad)"
+    image: "/assets/images/fullsize/vitae/purdue.webp"
+    description: "Researcher at Purdue Datalab, collaborating with PhD candidates on AI projects. Specialized in time series analysis and feature engineering, with thesis: Feature Construction and Classification of Time Series Data. 
+    Completed advanced coursework in machine learning and data mining."
+
+  - company: "Polytechnic University of Catalonia"
+    url: "https://www.upc.edu/en?set_language=en"
+    location: "Barcelona, ESP"
+    time: "Sep'15 - Jun'17"
+    title: "Master in Artificial Intelligence"
+    image: "/assets/images/fullsize/vitae/upc.webp"
+    description: "Specialized in computer vision and neural network architectures, with focus on supervised and unsupervised learning methodologies. Core coursework included deep learning, statistical modeling, and pattern recognition. 
+    Developed strong foundation in fundamental AI algorithms and their practical applications.
+"
+
+  - company: "University of Stavanger"
+    url: "https://www.uis.no/en"
+    location: "Stavanger, NOR"
+    time: "Aug'14 - Jun'14"
+    title: "B.Sc. Student (Study Abroad)"
+    image: "/assets/images/fullsize/vitae/uis.webp"
+    description: "Awarded competitive Erasmus and NILS scholarships for international studies. Completed thesis project on computer vision applications, implementing optical flow algorithms for motion analysis using action camera data. 
+    Focus on real-time video processing and computer vision techniques."
+
+
+  - company: "University of A Coruña"
+    url: "https://www.udc.es/"
+    location: "A Coruña, ESP"
+    time: "Sep'11 - Jun'16"
+    title: "B.Sc. Student"
+    image: "/assets/images/fullsize/vitae/udc.webp"
+    description: "Comprehensive foundation in computer science fundamentals, with focus on algorithmic complexity, data structures, and software development methodologies."
+

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <meta charset="utf-8">
+
+  <title>{{ page.title }}</title>
+
+  <meta name="author" content="{{ site.data.main_info.name }}">
+  <meta property="og:website" content="{{ site.data.main_info.name }} personal website">
+  <meta name="robots" content="max-image-preview:large">
+  <meta name="title" property="og:title" content="{{ page.title }}">
+
+  {% if page.description %}
+  <meta name="description" property="og:description" content="{{ page.description }}">
+  {% else %}
+  <meta name="description" property="og:description" content="{{ site.data.main_info.description }}">
+  {% endif %}
+
+  {% if page.image %}
+  <meta name="image" property="og:image" content="{{ page.image | prepend: site.relative_url }}">
+  {% else %}
+  <meta name="image" property="og:image" content="{{ site.data.main_info.default_pic | prepend: site.relative_url }}">
+  {% endif %}
+
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+
+  <!-- Set canonical link to avoid duplication in google search -->
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <!-- preload fonts -->
+  <link rel="preload" href="{{ "/libs/external/fonts/Graphik-Regular.woff2" | prepend: site.baseurl }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ "/libs/external/fonts/Graphik-Semibold.woff2" | prepend: site.baseurl }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ "/libs/external/fonts/Tiempos-Headline-Semibold.woff2" | prepend: site.baseurl }}" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href={{ "/libs/custom/my_css.css" | prepend: site.baseurl }}>
+  <link rel="stylesheet" href={{ "/libs/external/fonts/fonts.css" | prepend: site.baseurl }}>
+
+  <!-- hack for non critical css https://web.dev/defer-non-critical-css/ -->
+  <link rel="preload" href={{ "/libs/custom/syntax.css" | prepend: site.baseurl }} as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href={{ "/libs/custom/syntax.css" | prepend: site.baseurl }}></noscript>
+  
+  <!-- non critical lighthouse css -->
+  <link rel="preload" href={{ "/libs/external/lightbox/lightbox.css" | prepend: site.baseurl }} as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href={{ "/libs/external/lightbox/lightbox.css" | prepend: site.baseurl }}></noscript>
+
+  <!-- Fontello
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet"
+    href={{ "/libs/external/fontello-bb2d1770/css/fontello.css" | prepend: site.baseurl }}>
+
+
+  <!-- Hihglight.js
+  <!-- Preload CSS -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css"></noscript>
+  
+  <!-- Load only necessary languages (example: javascript and python) -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/yaml.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/dockerfile.min.js"></script>
+
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href={{ "/libs/icon.png" | prepend: site.baseurl }}>
+  <link rel="shortcut icon" type="image/png" href={{ "/libs/icon.png" | prepend: site.baseurl }}>
+
+  <!-- RSS Feed -->
+  <link rel="alternate" type="application/atom+xml" href="{{ site.url }}{{ site.data.main_info.rss }}">
+
+
+  <!-- Google Analytics -->
+  {% include google_analytics.html %}
+  {% include twitter_card.html %}
+
+</head>
+
+<body>
+
+  {{ content}}
+
+    <div class="footer">
+      <div class="footer-sign">
+      <p> <a  href={{ "/index.html#top" | prepend: site.baseurl }}>{{ site.data.main_info.name }} </a></p>
+      </div>
+
+      <div class="footer-thanks">
+        <p>based on <a href="http://web.media.mit.edu/~msaveski" target="_blank" rel="noopener">Martin Saveski</a> and <a href='https://marinaaisa.com/' target="_blank" rel="noopener">Marina Aisa</a> templates</p>
+      </div>
+
+      <div class="footer-icons">
+        <a href='{{site.data.main_info.github}}' target="_blank" rel="noopener">
+          <i class="icon-github-circled" aria-hidden="true"></i>
+        </a>
+
+        <a href='{{site.data.main_info.linkedin}}' target="_blank" rel="noopener">
+          <i class="icon-linkedin-squared" aria-hidden="true"></i>
+        </a>
+
+        <a href='{{site.data.main_info.twitter}}' target="_blank" rel="noopener">
+          <i class="icon-twitter-squared" aria-hidden="true"></i>
+        </a>
+
+        <a href='{{site.baseurl}}{{site.data.main_info.rss}}' target="_blank" rel="noopener">
+          <i class="icon-rss-squared" aria-hidden="true"></i>
+        </a>
+        
+      </div>
+
+    </div>
+
+  <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script type="text/javascript" src={{ "/libs/external/lightbox/lightbox.js" | prepend: site.baseurl }} defer></script>
+  
+  <!-- Mathjax -->
+  {% if page.mathjax %}
+    {% include mathjax.html %}
+  {% endif %}
+
+  <!-- Highlight.js -->
+  {% include code_highlight.html %}
+
+</body>
+
+</html>
