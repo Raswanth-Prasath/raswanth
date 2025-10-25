@@ -2,11 +2,11 @@ source: .
 destination: ./_site
 includes: ./_includes
 baseurl: ""
-url: "https://raswanth-prasath.github.io"
-relative_url: "https://raswanth-prasath.github.io"
+url: "https://raswanthprasath.com"
+relative_url: "https://raswanthprasath.com"
 permalink: /:year/:month/:day/:title
 title: "Raswanth Prasath"
-description: "Your description here"
+description: "Raswanth Prasath personal website and portfolio"
 
 markdown: kramdown
 highlighter: none

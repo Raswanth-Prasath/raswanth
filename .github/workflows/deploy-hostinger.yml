@@ -16,7 +16,7 @@ jobs:
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.2'
+        ruby-version: '3.1'
         bundler-cache: true
     
     - name: Install libvips
@@ -28,7 +28,12 @@ jobs:
       run: bundle install
     
     - name: Build Jekyll site
-      run: JEKYLL_ENV=production bundle exec jekyll build
+      run: |
+        JEKYLL_ENV=production bundle exec jekyll build
+        echo "Build completed. Checking _site directory..."
+        ls -la _site/
+        echo "Checking index.html..."
+        head -20 _site/index.html
       
     - name: Deploy to Hostinger via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -41,4 +46,6 @@ jobs:
         local-dir: ./_site/
         server-dir: ./public_html/
         dangerous-clean-slate: true
-        log-level: verbose
+        exclude: |
+          **/.git*
+          **/.git*/**
