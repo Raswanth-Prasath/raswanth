@@ -6,7 +6,7 @@ url: "https://raswanthprasath.com"
 relative_url: "https://raswanthprasath.com"
 permalink: /:year/:month/:day/:title
 title: "Raswanth Prasath"
-description: "Raswanth Prasath personal website and portfolio"
+description: "Raswanth Prasath - Personal Website"
 
 markdown: kramdown
 highlighter: none

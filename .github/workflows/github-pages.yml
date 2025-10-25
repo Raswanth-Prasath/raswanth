@@ -5,13 +5,11 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -27,7 +25,7 @@ jobs:
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.2'
+        ruby-version: '3.1'
         bundler-cache: true
     
     - name: Install libvips
@@ -39,7 +37,8 @@ jobs:
       run: bundle install
     
     - name: Build with Jekyll
-      run: JEKYLL_ENV=production bundle exec jekyll build
+      run: |
+        JEKYLL_ENV=production bundle exec jekyll build --config _config.yml,_config_github.yml
       
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
