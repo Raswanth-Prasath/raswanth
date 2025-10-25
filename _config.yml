@@ -2,22 +2,23 @@ source: .
 destination: ./_site
 includes: ./_includes
 baseurl: null
-relative_url: "https://miguel-mendez-ai.com"
-url: "https://miguel-mendez-ai.com"
+relative_url: "https://raswanthprasath.com"
+url: "https://raswanthprasath.com"
 permalink: /:year/:month/:day/:title
-title: "Miguel Mendez AI Blog"
-description: "Miguel Mendez personal website. Posts about Machine Learning and Deep Learning."
+title: "Raswanth Prasath"
+description: "Your description here"
 
 markdown: kramdown
 highlighter: none
 kramdown:
   input: GFM
 
-# Removes content from rss feed https://github.com/jekyll/jekyll-feed?tab=readme-ov-file#excerpt-only-flag
 feed:
   excerpt_only: true
   posts_limit: 15
 
+picture:
+  ignore_missing_images: true
 
 plugins:
   - jekyll-sitemap
