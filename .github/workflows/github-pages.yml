@@ -39,6 +39,7 @@ jobs:
     - name: Build with Jekyll
       run: |
         JEKYLL_ENV=production bundle exec jekyll build --config _config.yml,_config_github.yml
+        echo "www.raswanthprasath.com" > _site/CNAME
       
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
