@@ -1,0 +1,64 @@
+name: Deploy to Hostinger
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.2'
+        bundler-cache: true
+    
+    - name: Install libvips
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libvips libvips-dev
+    
+    - name: Install dependencies
+      run: bundle install
+    
+    - name: Build Jekyll site
+      run: |
+        JEKYLL_ENV=production bundle exec jekyll build
+        echo "Build completed. Checking _site directory..."
+        ls -la _site/
+        echo "Checking index.html..."
+        head -20 _site/index.html
+        
+    - name: Create .htaccess for HTTPS redirect
+      run: |
+        cat > _site/.htaccess << 'HTACCESS'
+        # Force HTTPS
+        RewriteEngine On
+        RewriteCond %{HTTPS} off
+        RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+        
+        # Force non-www (remove www)
+        RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+        RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+        HTACCESS
+
+    - name: Deploy to Hostinger via FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        port: 21
+        protocol: ftp
+        local-dir: ./_site/
+        server-dir: ./public_html/
+        dangerous-clean-slate: true
+        exclude: |
+          **/.git*
+          **/.git*/**
