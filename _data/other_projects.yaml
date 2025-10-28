@@ -1,7 +1,12 @@
 other_projects:
-  - title: "Pyodi: Python Object Detection Insights"
+  - title: "Learning-Based Data Association for Vehicle Trajectories"
     description: 
-      "A simple tool for explore your object detection dataset. The goal of this library is to provide simple and intuitive visualizations
-       from your dataset and automatically find the best parameters for generating a specific grid of anchors that can fit you data characteristics"
-    code: "https://github.com/Gradiant/pyodi"
-    tags: "#deep-learning #computer-vision #object-detection #pytorch"
+      "Implemented data association of fragmented trajectory data using learning-based models. Utilized logistic regression as a cost function to achieve 89% reduction in trajectory fragmentation. Evaluated tracking performance using CLEAR MOT metrics for vehicle trajectory analysis."
+    code: "https://github.com/Raswanth-Prasath"
+    tags: "#machine-learning #data-association #vehicle-tracking #python"
+
+  - title: "Transportation Data Science Project (TDSP)"
+    description: 
+      "Analyzed NYC's Motor Vehicle Collisions dataset to identify trends in accident frequency and geospatial hotspots. Conducted time series analysis to uncover seasonal patterns and geospatial analysis to map high-risk zones across NYC."
+    code: "https://github.com/Raswanth-Prasath"
+    tags: "#data-science #geospatial-analysis #time-series #python #gis"

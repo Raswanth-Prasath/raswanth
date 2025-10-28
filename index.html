@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Miguel Mendez | Personal Webpage
+title: Raswanth Prasath | Personal Webpage
 ---
 <!-- ========== Header ========== -->
 <div class="container">
@@ -30,6 +30,10 @@ title: Miguel Mendez | Personal Webpage
         <i class="icon-twitter-squared" aria-hidden="true"></i>
       </a>
 
+      <a href='{{site.data.main_info.behance}}' target="_blank" rel="noopener">
+        <i class="icon-behance" aria-hidden="true"></i>
+      </a>
+
       <a href='{{site.baseurl}}{{site.data.main_info.rss}}' target="_blank" rel="noopener">
         <i class="icon-rss-squared" aria-hidden="true"></i>
       </a>
@@ -42,13 +46,14 @@ title: Miguel Mendez | Personal Webpage
 
     <h2>Bio</h2>
     <p>
-      I am a <span class="bio-highlight">Senior Machine Learning Engineer</span> at <a href="https://www.hudl.com" target="_blank" rel="noopener">Hudl</a>, focused on developing cutting-edge computer vision systems for sports analytics.
-      My work involves developing production-scale AI systems for data acquisition and analysis, with expertise in multi-object tracking, camera calibration, object detection, and generative models.
+      I am a <span class="bio-highlight">Civil Engineering student</span> at <a href="https://www.asu.edu" target="_blank" rel="noopener">Arizona State University</a>, specializing in <span class="bio-highlight">transportation engineering</span> with a focus on traffic modeling, geospatial analysis, and data-driven infrastructure solutions.
+      My work involves developing intelligent transportation systems, conducting traffic impact studies, and leveraging machine learning and GIS tools to improve urban mobility and safety.
     </p>
 
     <p>
-      My professional journey includes developing advance computer vision model for automated sports data collection at Statsbomb. Previously, I conducted computer vision research at <a href="https://www.gradiant.org/en//" target="_blank" rel="noopener">Gradiant</a> and implementing machine learning solutions for retail optimization at <a href="https://www.desigual.com" target="_blank" rel="noopener">Desigual</a>. 
-      I completed my M.Sc. in Artificial Intelligence through a dual program, studying at the Polytechnic University of Catalonia for the first year and Purdue University for my final year. I hold a B.Sc. in Computer Science from the University of A Coruña, which included an enriching exchange year at the University of Stavanger in Norway.
+      My professional experience includes designing traffic control systems and pedestrian signals at <a href="https://www.hrgreen.com" target="_blank" rel="noopener">HR Green</a>, conducting advanced GIS analysis at the <a href="https://sese.asu.edu" target="_blank" rel="noopener">School of Earth and Space Exploration</a>, and performing traffic engineering consulting at <a href="https://conceptdash.com" target="_blank" rel="noopener">Concept Dash</a>. 
+      I completed my B.Tech. in Civil Engineering at <a href="https://www.nitt.edu" target="_blank" rel="noopener">NIT Tiruchirappalli</a>, where I developed expertise in traffic calming measures and road safety at the Centre of Excellence for Road Safety (CoERS), IIT Madras. 
+      I am passionate about combining Python, QGIS, traffic simulation tools (VISSIM, Synchro), and machine learning to solve complex transportation challenges and contribute to safer, more efficient urban systems.
     </p>
 
 
@@ -98,7 +103,7 @@ title: Miguel Mendez | Personal Webpage
         {% assign post_count = post_count | plus: 1 %}
         
         <!-- add see more link and set next posts to class hidden -->
-        {% if post_count == {{site.data.main_info.posts_to_show }} %}
+        {% if post_count == site.data.main_info.posts_to_show %}
           <a href="#" class="see-more-link">See more posts</a>
           {% assign post_classes = post_classes | append: 'hidden' %}
         {% endif %}
